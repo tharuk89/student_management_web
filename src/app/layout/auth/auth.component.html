@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="login-box">
+      <div class="login-logo">
+      </div>
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+        <form [formGroup]="userLoginForm">
+          <div class="input-group mb-3">
+              <input class="form-control" formControlName="email" placeholder="Email" type="email">
+          </div>
+          <div class="input-group mb-3">
+            <input class="form-control" formControlName="password" placeholder="Password" type="password">
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <button class="btn btn-primary" type="button" (click)="loginWithCredentials(userLoginForm.value)">Sign In
+              </button>
+            </div>
+            <span class="or-text">OR</span>
+            <div class="col-5">
+              <button class="btn btn-info pull-right" type="button" routerLink="/signup">Sign Up
+              </button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-4"></div>
+

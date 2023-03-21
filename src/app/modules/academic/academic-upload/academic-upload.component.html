@@ -1,0 +1,29 @@
+<div class="content-page">
+  <div class="row content-header">
+    <form [formGroup]="academicUploadForm">
+      <div class="input-group mb-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Document Type</mat-label>
+          <mat-select formControlName="documentType">
+            <mat-option *ngFor="let docType of documentList" [value]="docType.value">
+              {{docType.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="input-group mb-3">
+        <input class="form-control" type="text" placeholder="Document Name" formControlName="documentName">
+      </div>
+      <div class="input-group mb-3">
+        <input type="file" formControlName="file"
+               id="file"
+               type="file"
+               (change)="onFileChange($event)"/>
+        <label for="file" class="btn-1">Upload Image</label>
+      </div>
+      <div class="input-group mb-3">
+        <button class="btn btn-info pull-right" (click)="uploadImage()">Upload</button>
+      </div>
+    </form>
+  </div>
+</div>

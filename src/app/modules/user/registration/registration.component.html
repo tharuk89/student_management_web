@@ -1,0 +1,77 @@
+<div class="container-fluid main-dev">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Student Registration</span>
+        </div>
+        <div class="card-body login-card-body">
+          <form [formGroup]="userRegForm">
+            <div class="mb-4">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                formControlName="firstName"/>
+            </div>
+            <div class="mb-4">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                formControlName="lastName"/>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="form-label">E-mail</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                formControlName="email"/>
+            </div>
+            <div class="mb-4">
+              <label for="mobile" class="form-label">Mobile</label>
+              <input
+                type="text"
+                class="form-control"
+                id="mobile"
+                formControlName="mobile"/>
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                formControlName="password"/>
+            </div>
+            <div class="mb-4">
+              <label for="verify-password" class="form-label">Verify Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="verify-password"
+                formControlName="verifyPassword"/>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <button class="btn btn-primary" type="button" routerLink="/login">Sign
+                  In
+                </button>
+              </div>
+              <span class="or-text">OR</span>
+              <div class="col-5">
+                <button type="button" class="btn btn-primary pull-right" (click)="save(userRegForm.value)">Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

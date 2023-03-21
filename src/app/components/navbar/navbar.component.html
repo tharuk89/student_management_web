@@ -1,0 +1,18 @@
+<nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+  <div class="container">
+    <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler order-1"
+            data-target="#navbarCollapse" data-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+      <li class="nav-item dropdown" [matMenuTriggerFor]="menu">
+        <img src="assets/images/avatar.png" alt="Avatar" class="avatar">
+      </li>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="updateProfile()">My Profile</button>
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,20 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <a class="brand-link" href="#">
+    <span class="brand-text font-weight-light"></span>
+  </a>
+
+  <div class="sidebar">
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview" role="menu">
+        <li class="nav-item" *ngFor="let menu of menuList">
+          <a class="nav-link" [routerLinkActive]="'active'" href="#" [routerLink]="menu.route" *ngIf="!menu.hide">
+            <p>
+              {{menu.title}}
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
